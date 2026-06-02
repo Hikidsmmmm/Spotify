@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VibeFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">VibeFlow</h2>
+
+    <nav class="nav">
+      <button class="nav-btn active">Home</button>
+      <button class="nav-btn">Search</button>
+      <button class="nav-btn">Your Library</button>
+    </nav>
+
+    <div class="playlist-section">
+      <div class="playlist-header">
+        <span>Your Playlists</span>
+        <button id="newPlaylistBtn">+</button>
+      </div>
+      <ul id="playlistList"></ul>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <header class="main-header">
+      <h1>Good afternoon, <span id="displayName"></span></h1>
+    </header>
+
+    <section class="songs-grid" id="songsGrid">
+      <!-- You will add your own songs here -->
+    </section>
+  </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
