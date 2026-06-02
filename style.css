@@ -1,0 +1,161 @@
+/* GENERAL */
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: 100vh;
+}
+
+/* LOGIN PAGE */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.login-container {
+  background: #111;
+  padding: 40px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #1db954;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-note {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  background: #181818;
+  color: #fff;
+}
+
+.playlist-section {
+  margin-top: auto;
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#playlistList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#playlistList li {
+  padding: 6px 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* MAIN */
+.main {
+  padding: 20px;
+  overflow-y: auto;
+  background: linear-gradient(#333, #000);
+}
+
+.main-header h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* SONG CARDS */
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.song-card {
+  background: #181818;
+  padding: 12px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.song-cover {
+  height: 140px;
+  background: #333;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.like-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.like-btn.liked {
+  color: #1db954;
+}
