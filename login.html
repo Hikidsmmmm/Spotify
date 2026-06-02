@@ -3,27 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Login • VibeFlow</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
 </head>
-<body class="login-body">
+<body>
 
-  <div class="login-container">
+<div class="login-wrapper">
+  <div class="login-card">
+
+    <div class="login-icon">➜</div>
+
     <h1 class="login-title">Welcome back</h1>
+    <p class="login-subtitle">Log in to your account</p>
 
-    <input id="loginUser" type="text" placeholder="Username">
-    <button id="loginSubmit">Log in</button>
+    <button class="google-btn">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="google-icon">
+      Continue with Google
+    </button>
 
-    <p class="login-note">Your playlists and liked songs are saved on this device.</p>
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <label>Email</label>
+    <input id="emailInput" type="email" placeholder="you@example.com">
+
+    <label>Password</label>
+    <input id="passwordInput" type="password" placeholder="••••••••">
+
+    <a class="forgot" href="#">Forgot password?</a>
+
+    <button id="loginBtn" class="login-btn">Log in</button>
+
+    <p class="signup-text">
+      Don’t have an account?
+      <a href="#">Create one</a>
+    </p>
+
   </div>
+</div>
 
-  <script>
-    document.getElementById("loginSubmit").onclick = () => {
-      const user = loginUser.value.trim();
-      if (!user) return alert("Enter a username");
-      localStorage.setItem("vf_current_user", user);
-      location.href = "index.html";
-    };
-  </script>
+<script>
+  document.getElementById("loginBtn").onclick = () => {
+    const email = emailInput.value.trim();
+    if (!email) return alert("Enter an email");
+
+    localStorage.setItem("vf_current_user", email);
+    location.href = "index.html";
+  };
+</script>
 
 </body>
 </html>
