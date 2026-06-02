@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VibeFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1 class="logo">VibeFlow</h1>
+
+      <div class="login-box">
+        <input id="usernameInput" type="text" placeholder="Username" />
+        <button id="loginBtn">Log in</button>
+        <p id="currentUser"></p>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-btn active">Home</button>
+        <button class="nav-btn">Search</button>
+        <button class="nav-btn">Your Library</button>
+      </nav>
+
+      <div class="playlists">
+        <div class="playlists-header">
+          <span>Your Playlists</span>
+          <button id="newPlaylistBtn">+</button>
+        </div>
+        <ul id="playlistList"></ul>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="main-header">
+        <h2>Made for <span id="displayName">you</span></h2>
+      </header>
+
+      <section class="songs-grid" id="songsGrid">
+        <!-- Example song cards -->
+        <div class="song-card" data-id="1">
+          <div class="song-cover">🎵</div>
+          <div class="song-info">
+            <h3>Song One</h3>
+            <p>Artist A</p>
+          </div>
+          <button class="like-btn">♡</button>
+        </div>
+
+        <div class="song-card" data-id="2">
+          <div class="song-cover">🎧</div>
+          <div class="song-info">
+            <h3>Song Two</h3>
+            <p>Artist B</p>
+          </div>
+          <button class="like-btn">♡</button>
+        </div>
+
+        <div class="song-card" data-id="3">
+          <div class="song-cover">🔥</div>
+          <div class="song-info">
+            <h3>Song Three</h3>
+            <p>Artist C</p>
+          </div>
+          <button class="like-btn">♡</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
