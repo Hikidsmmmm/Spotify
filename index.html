@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>VibeFlow</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
+
+<!-- AUTO‑REDIRECT TO LOGIN -->
+<script>
+  if (!localStorage.getItem("vf_current_user")) {
+    location.href = "login.html";
+  }
+</script>
+
 <body>
 
 <div class="app">
@@ -17,30 +25,53 @@
       <button class="nav-btn active">Home</button>
       <button class="nav-btn">Search</button>
       <button class="nav-btn">Your Library</button>
+      <button class="nav-btn">Create Playlist</button>
+      <button class="nav-btn">Liked Songs</button>
     </nav>
-
-    <div class="playlist-section">
-      <div class="playlist-header">
-        <span>Your Playlists</span>
-        <button id="newPlaylistBtn">+</button>
-      </div>
-      <ul id="playlistList"></ul>
-    </div>
   </aside>
 
   <!-- MAIN CONTENT -->
   <main class="main">
-    <header class="main-header">
-      <h1>Good afternoon, <span id="displayName"></span></h1>
-    </header>
 
-    <section class="songs-grid" id="songsGrid">
-      <!-- You will add your own songs here -->
-    </section>
+    <h1 class="header">Good morning</h1>
+
+    <!-- RECENTLY PLAYED -->
+    <h2 class="section-title">Recently Played</h2>
+    <div class="grid" id="recentGrid"></div>
+
+    <!-- POPULAR -->
+    <h2 class="section-title">Popular</h2>
+    <div class="grid" id="popularGrid"></div>
+
+    <!-- MADE FOR YOU -->
+    <h2 class="section-title">Made For You</h2>
+    <div class="grid" id="madeGrid"></div>
+
   </main>
 
 </div>
 
-<script src="app.js"></script>
+<!-- PLAYER BAR -->
+<div class="player-bar">
+  <div class="player-left">No song playing</div>
+
+  <div class="player-center">
+    <button>⏮</button>
+    <button class="play-btn">▶</button>
+    <button>⏭</button>
+  </div>
+
+  <div class="player-right">
+    <span>0:00</span>
+    <div class="progress"></div>
+    <span>0:00</span>
+  </div>
+</div>
+<script>
+  if (!localStorage.getItem("vf_current_user")) {
+    location.href = "login.html";
+  }
+</script>
+<script src="home.js"></script>
 </body>
 </html>
