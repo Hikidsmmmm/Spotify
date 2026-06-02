@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login • VibeFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-container">
+    <h1 class="login-title">Welcome back</h1>
+
+    <input id="loginUser" type="text" placeholder="Username">
+    <button id="loginSubmit">Log in</button>
+
+    <p class="login-note">Your playlists and liked songs are saved on this device.</p>
+  </div>
+
+  <script>
+    document.getElementById("loginSubmit").onclick = () => {
+      const user = loginUser.value.trim();
+      if (!user) return alert("Enter a username");
+      localStorage.setItem("vf_current_user", user);
+      location.href = "index.html";
+    };
+  </script>
+
+</body>
+</html>
+
