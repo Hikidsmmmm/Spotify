@@ -1,0 +1,132 @@
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: calc(100vh - 90px);
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  background: #181818;
+  color: #fff;
+}
+
+/* MAIN */
+.main {
+  padding: 20px;
+  overflow-y: auto;
+  background: linear-gradient(#333, #000);
+}
+
+.header {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #181818;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-img {
+  height: 140px;
+  background: #333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-sub {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* PLAYER BAR */
+.player-bar {
+  height: 90px;
+  background: #181818;
+  border-top: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.player-left {
+  opacity: 0.7;
+}
+
+.player-center button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.play-btn {
+  font-size: 28px;
+}
+
+.player-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  width: 200px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+}
